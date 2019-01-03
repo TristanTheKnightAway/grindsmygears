@@ -16,15 +16,31 @@ const BlogPost = ({ data }) => (
 export default BlogPost
 
 export const query = graphql`
-  query($slug: String!) {
-    nodeArticle (fields: { slug: { eq: $slug } }) {
-      title
-      created
-      changed
-      body {
-        processed
-        summary
-      }
+query($slug: String!) {
+  nodeArticle (fields: { slug: { eq: $slug } }) {
+    title
+    created
+    changed
+    body {
+      processed
+      summary
     }
   }
+}
 `
+
+// query {
+//   nodeArticle {
+//     fields
+//       { slug} 
+//     title
+//     created
+//     changed
+//     body {
+//       processed
+//       summary
+//     }
+//   }
+// }
+// `
+
