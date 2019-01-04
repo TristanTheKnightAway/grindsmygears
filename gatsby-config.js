@@ -8,7 +8,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-drupal',
       options: {
-        baseUrl: 'http://grindsmygears',
+        // baseUrl: 'http://grindsmygears',
+        baseUrl: 'http://live-gmg-backend.pantheonsite.io',
         apiBase: 'jsonapi',
       },
     },

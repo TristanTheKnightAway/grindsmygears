@@ -6,7 +6,7 @@ import BlogTeaser from '../components/blog-teaser.js'
 
 const BlogPage = ( {data} ) => (
   <Layout>
-    <h3>These things anger unicorns...</h3>
+    <h3>Even Unicorns Anger</h3>
     {data.allNodeArticle.edges.map((post) => (
       <BlogTeaser
         key={post.node.id}
