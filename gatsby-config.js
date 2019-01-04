@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Know What Grinds My Gears?',
-    description: 'Some days you have no choice but to rant',
-    author: 'A Team of Unicorns',
+    description: 'Angry Unicorns',
+    author: 'A Team of Angry Unicorns',
   },
   plugins: [
     {
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/../grindsmygears/sites/default/files/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     'gatsby-transformer-sharp',

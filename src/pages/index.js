@@ -6,12 +6,13 @@ import BlogTeaser from '../components/blog-teaser.js'
 
 const BlogPage = ( {data} ) => (
   <Layout>
-    <h1>Somedays you just have to rant</h1>
+    <h3>These things anger unicorns...</h3>
     {data.allNodeArticle.edges.map((post) => (
       <BlogTeaser
         key={post.node.id}
         slug={post.node.fields.slug}
         title={post.node.title}
+        // image={post.node.relationships}
         summary={post.node.body.summary.length >0 ? post.node.body.summary : post.node.body.processed.substring(0,300)}
       />
     ))}
@@ -31,21 +32,26 @@ query BlogPageQuery {
         processed
         summary
       }
+      relationships{
+        field_image {
+          url
+        }
+      }
       fields {
         slug
       }
-      relationships {
-        field_image {
-          uri {
-            value
-            url
-          }
-        }
       }
     } 
   }
 }
-}
 `
 
 export default BlogPage
+
+      // relationships {
+      //   field_image {
+      //     uri {
+      //       value
+      //       url
+      //     }
+      //   }
